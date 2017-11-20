@@ -14,13 +14,17 @@ public class GreetingController {
 	@Autowired
 	CounterService counterService;
 
-        @Value("${vcap.application.space_name:Local}")
-	String env; 
+  @Value("${vcap.application.space_name:Local}")
+	String env;
+
+	@Value("${git.commit.time:Unknown}")
+	String gitVersion;
 
 	@RequestMapping("/")
 	public String greeting(@RequestParam(value="name", required=false, defaultValue="World") String name, Model model) {
        counterService.increment("spring.paris.attendees.view");
 			 model.addAttribute("name", env);
+			 model.addAttribute("gitVersion", gitVersion);
 			 return "greeting";
 	}
 
