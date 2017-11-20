@@ -13,7 +13,7 @@ public class GreetingController {
 	@Autowired
 	CounterService counterService;
 
-	@RequestMapping("/greeting")
+	@RequestMapping("/")
 	public String greeting(@RequestParam(value="name", required=false, defaultValue="World") String name, Model model) {
        counterService.increment("spring.paris.attendees.view");
 			 model.addAttribute("name", name);
