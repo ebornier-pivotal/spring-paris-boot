@@ -14,7 +14,7 @@ public class GreetingController {
 	@Autowired
 	CounterService counterService;
 
-        @Value("${vcap.application.space_name}")
+        @Value("${vcap.application.space_name:Local}")
 	String env; 
 
 	@RequestMapping("/")
