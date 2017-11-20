@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.example.springparisboot.SpringParisBootApplicationTests
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.406 sec - in com.example.springparisboot.SpringParisBootApplicationTests
